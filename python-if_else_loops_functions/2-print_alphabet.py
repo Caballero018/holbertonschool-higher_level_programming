@@ -3,3 +3,4 @@ i = 97
 while i <= 122:
     print(f"{chr(i)}", end="")
     i += 1
+print("")
