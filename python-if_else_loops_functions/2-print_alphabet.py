@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import string
-for letter in string.ascii_lowercase:
-   print(letter, end = "")
-   
+i = 97
+while i <= 122:
+    print(chr(i), end="")
+    i += 1
