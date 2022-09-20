@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 str = "SchoolHolberton "
-print(f"Holberton {str * 2} \nHolberton")
+print(f"Holberton {str * 2}School\nHolberton")
