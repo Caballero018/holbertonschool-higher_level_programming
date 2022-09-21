@@ -9,5 +9,5 @@ while i < 90:
         if not (i == 89):
             print("{}{}" .format(l, j), end=", ")
         else:
-            print("{}{}" .format(l, j))   
+            print("{}{}" .format(l, j))
     i += 1
