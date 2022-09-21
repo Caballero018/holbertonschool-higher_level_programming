@@ -9,4 +9,3 @@ while i < 100:
     else:
         print("{}{}" .format(l[0], j))
     i += 1
-
