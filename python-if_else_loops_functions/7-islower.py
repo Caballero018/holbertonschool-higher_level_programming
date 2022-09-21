@@ -5,4 +5,3 @@ def islower(c):
         return False
     else:
         return True
-    
