@@ -6,11 +6,10 @@ if __name__ == "__main__":
     i = 1
     if ar <= 0:
         print("{} arguments." .format(ar))
+    elif ar == 1:
+        print("{} argument:" .format(ar))
     else:
         print("{} arguments:" .format(ar))
         while i <= ar:
-            if i == 1:
-                print("{}: {}".format(i, argv[i]), end=" ")
-            else:
-                print("{}: {}".format(i, argv[i]))
+            print("{}: {}".format(i, argv[i]))
             i += 1
