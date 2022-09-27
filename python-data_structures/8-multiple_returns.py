@@ -7,7 +7,7 @@ def multiple_returns(sentence):
         t = None
         print(t)
         return tup
-    sentence = None
-    tup = (0, sentence)
-    return tup
-    
+    else:
+        sentence = None
+        tup = (0, sentence)
+        return tup
