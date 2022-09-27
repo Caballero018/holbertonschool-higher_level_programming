@@ -2,6 +2,8 @@
 def divisible_by_2(my_list=[]):
     for i in my_list:
         if i % 2 == 0:
-            return True
+            tr = True
+            return tr
         else:
-            return False
+            tr =  False
+            return tr
