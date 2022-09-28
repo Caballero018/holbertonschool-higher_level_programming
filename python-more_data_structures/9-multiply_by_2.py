@@ -4,5 +4,3 @@ def multiply_by_2(a_dictionary):
     for k, val in a_dictionary.items():
         di[k] = val * 2
     return di
-        
-    
