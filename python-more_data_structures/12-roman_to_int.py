@@ -5,7 +5,8 @@ def roman_to_int(roman_string):
         'M': 1000, 'IV': 4, 'IX': 9, 'XL': 40, 'XC': 90, 'CD': 400, 'CM': 900}
         int_val = 0
         for i in range(len(roman_string)):
-            if i > 0 and rom_val[roman_string[i]] > rom_val[roman_string[i - 1]]:
+            if i > 0 and rom_val[roman_string[i]] > \
+            rom_val[roman_string[i - 1]]:
                 int_val += rom_val[roman_string[i]] - 2 * \
                 rom_val[roman_string[i - 1]]
             else:
