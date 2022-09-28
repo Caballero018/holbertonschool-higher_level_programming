@@ -4,7 +4,7 @@ def update_dictionary(a_dictionary, key, value):
     if not (a_dictionary == a):
         for i, val in a_dictionary.items():
             if i == key:
-                a_dictionary[i] = value                
+                a_dictionary[i] = value
             else:
                 i, val = key, value
                 a_dictionary[i] = val
@@ -13,7 +13,3 @@ def update_dictionary(a_dictionary, key, value):
         i, val = key, value
         a_dictionary[i] = val
         return a_dictionary
-    
-      
-        
-    
