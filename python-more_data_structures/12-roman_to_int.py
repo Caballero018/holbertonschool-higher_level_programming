@@ -11,7 +11,7 @@ def roman_to_int(roman_string):
             if i > 0 and rom_val[roman_string[i]] > \
                 rom_val[roman_string[i - 1]]:
                         int_val += rom_val[roman_string[i]] - 2 * \
-                        rom_val[roman_string[i - 1]]
+                            rom_val[roman_string[i - 1]]
             else:
                 int_val += rom_val[roman_string[i]]
         return int_val
