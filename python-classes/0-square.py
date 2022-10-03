@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 class Square:
     "An empty block"
-    pass
+    def pas():
+        pass
     "An empty block"
