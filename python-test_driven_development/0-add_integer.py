@@ -10,7 +10,7 @@ def add_integer(a, b=98):
         raise TypeError("b must be an integer")
     if isinstance(a, float) or isinstance(b, float):
         a = int(a)
-        b = int(b)    
+        b = int(b)
     if isinstance(a, int) or isinstance(b, int):
         """Add of int (a) and (b)"""
         return a + b
