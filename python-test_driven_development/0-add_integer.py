@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 "Function that adds 2 integers."
 
+
 def add_integer(a, b=98):
     if isinstance(a, float) or isinstance(b, float):
         a = int(a)
@@ -11,7 +12,3 @@ def add_integer(a, b=98):
         raise TypeError("b must be an integer")
     if isinstance(a, int) or isinstance(b, int):
         return a + b
-
-    if __name__ == "__main__":
-        import doctest
-        doctest.testmod()
