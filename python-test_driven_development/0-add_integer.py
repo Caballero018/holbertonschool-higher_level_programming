@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Module that contains a function that adds 2 integers."""
-import doctest
 
 
 def add_integer(a, b=98):
