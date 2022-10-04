@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"Function that adds 2 integers."
+"Module that contains a function that adds 2 integers."
 
 
 def add_integer(a, b=98):
+    "Function that adds 2 integers."
     if isinstance(a, float) or isinstance(b, float):
         a = int(a)
         b = int(b)
