@@ -1,0 +1,3 @@
+>>> add_integer = _import_("0-add_integer").add_integer
+        Nombre a usar                  archivo fuente    función a usar 
+        en el test
