@@ -1,1 +1,1 @@
->>> add_integer = _import_("0-add_integer").add_integer
+>>> add_integer = __import__("0-add_integer").add_integer
