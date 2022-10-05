@@ -1,5 +1,14 @@
->>> indentation = __import__('5-text_indentation').text_indentation
->>> text_indentation(5665)
-Traceback(most recent call last):
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation()
+
+>>> text_indentation("Yo soy Luck. Mas conocido como Lucas, Luck: Lucas Apellido?")
+Yo soy Luck.
+<BLANKLINE>
+Mas conocido como Lucas, Luck:
+<BLANKLINE>
+Lucas Apellido?
+<BLANKLINE>
+>>> text_indentation(34)
+Traceback (most recent call last):
 ...
 TypeError: text must be a string
