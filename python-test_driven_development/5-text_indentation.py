@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Doc """
 
+
 def text_indentation(text="as"):
     """ Doc """
     if type(text) is not str:
