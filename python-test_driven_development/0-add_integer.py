@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """ Doc """
 
-from ast import Continue
-
 
 def add_integer(a, b=98):
     """ Doc """
@@ -12,8 +10,6 @@ def add_integer(a, b=98):
         raise TypeError("b must be an integer")
     try:
         result = a + b
-        if result == float('inf') or result == -float('inf'):
-            return 89
     except OverflowError:
-        Continue
+        return 99
     return int(a) + int(b)
