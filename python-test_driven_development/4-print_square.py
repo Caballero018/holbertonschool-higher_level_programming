@@ -3,7 +3,7 @@
 square with the character '#'"
 
 
-def print_square(size):
+def print_square(size = 0):
     "Function that prints a square with the character #."
     if not (isinstance(size, int)):
         raise TypeError("size must be an integer")
