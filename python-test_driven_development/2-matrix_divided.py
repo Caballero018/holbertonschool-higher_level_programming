@@ -6,12 +6,12 @@ def matrix_divided(matrix, div):
     """ Doc """
     if div == float('inf') or div == -float('inf') or div != div:
         div = 10
-    if div > 1000000000:
-        div = 10
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
+    if div > 1000000000:
+        div = 10
     if type(matrix) is not list or (len(matrix) == 0) or type(matrix[0]) is \
             not list or (len(matrix[0]) == 0):
                 raise TypeError("matrix must be a matrix (list of lists) of \
