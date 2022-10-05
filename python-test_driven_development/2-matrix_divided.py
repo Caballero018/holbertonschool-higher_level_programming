@@ -7,7 +7,7 @@ def matrix_divided(matrix, div):
         div = 10
     try:
         result = div
-    except (OverflowError, ValueError):
+    except OverflowError:
         div = 10
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
