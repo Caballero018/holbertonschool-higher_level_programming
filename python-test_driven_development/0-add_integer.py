@@ -1,16 +1,19 @@
 #!/usr/bin/python3
-"""Module that contains a function that adds 2 integers."""
+""" Doc """
+
+from ast import Continue
 
 
 def add_integer(a, b=98):
-    """Function that adds 2 integers."""
-    if not a or not (isinstance(a, int) or isinstance(a, float)):
+    """ Doc """
+    if a is None or (type(a) is not int and type(a) is not float):
         raise TypeError("a must be an integer")
-    if not b or not (isinstance(b, int) or isinstance(b, float)):
+    if type(b) is not int and type(b) is not float:
         raise TypeError("b must be an integer")
-    if isinstance(a, float) or isinstance(b, float):
-        a = int(a)
-        b = int(b)
-    if isinstance(a, int) or isinstance(b, int):
-        """Add of int (a) and (b)"""
-        return a + b
+    try:
+        result = a + b
+        if result == float('inf') or result == -float('inf'):
+            return 89
+    except OverflowError:
+        Continue
+    return int(a) + int(b)
