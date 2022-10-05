@@ -1,17 +1,19 @@
 #!/usr/bin/python3
-"Module that has function that prints a text with \
-2 new lines after each of these characters: ., ? and :"
-
+""" Doc """
 
 def text_indentation(text):
-    "Function that prints a text with 2 new lines after each \
-of these characters: ., ? and :"
-    if not text:
-        return ""
+    """ Doc """
     if type(text) is not str:
         raise TypeError("text must be a string")
-    for i in range(len(text)):
-        if text[i - 1] == "." or text[i - 1] == ":" or text[i - 1] == "?":
-            print()
-            print()
-        print(text[i], end="")
+    after_new_line = False
+    for c in text:
+        if after_new_line:
+            if c == " ":
+                continue
+            after_new_line = False
+        if c == '.' or c == '?' or c == ':':
+            print(c)
+            print("")
+            after_new_line = True
+        else:
+            print(c, end="")
