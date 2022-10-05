@@ -10,6 +10,8 @@ def add_integer(a, b=98):
         raise TypeError("b must be an integer")
     try:
         result = a + b
-    except OverflowError:
+    except (OverflowError, ValueError):
         return 99
+    if result == float('inf') or result == -float('inf'):
+        raise OverflowError(int(89))
     return int(a) + int(b)
