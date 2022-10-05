@@ -7,13 +7,13 @@ def text_indentation(text="as"):
     if type(text) is not str:
         raise TypeError("text must be a string")
     for i in range(len(text)):
-        if text[i] == " " or text[i] != " ":
-            if (text[i - 1] == "?" or text[i - 1] == ":" or text[i - 1] == ".") and text[i] == " ":
+        if text[i] == " " or text[i - 1] == " ":
+            if text[i - 1] == "." or text[i - 1] == ":" or text[i - 1] == "?":
                 print()
                 print()
                 if text[i] == " ":
                     continue
-            print(text[i], end="")
+        print(text[i], end="")
     if text[-1:] == "?" or text[-1:] == ":" or text[-1:] == ".":
         print()
         print()
