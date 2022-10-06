@@ -9,3 +9,4 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([1, 3, 4, 2]), 4)
         self.assertEqual(max_integer([1, 3, 4, 8]), 8)
         self.assertEqual(max_integer(), None)
+        self.assertEqual(max_integer([9, 3, 4, 2]), 9)
