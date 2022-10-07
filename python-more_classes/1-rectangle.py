@@ -8,14 +8,12 @@ class Rectangle:
         self._Rectangle__height = height
         self._Rectangle__width = width
 
-        value = self._Rectangle__width
-        if type(value) is not int:
+        if type(self._Rectangle__width) is not int:
             raise TypeError("width must be an integer")
-        if value < 0:
+        if self._Rectangle__width < 0:
             raise ValueError("width must be >= 0")
         
-        value_2 = self._Rectangle__height
-        if type(value_2) is not int:
+        if type(self._Rectangle__height) is not int:
             raise TypeError("height must be an integer")
-        if value_2 < 0:
+        if self._Rectangle__height < 0:
             raise ValueError("width must be >= 0")
