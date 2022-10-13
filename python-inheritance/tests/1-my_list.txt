@@ -15,6 +15,10 @@
 >>> my_list2.append(5)
 >>> print(my_list2)
 [1, 4, 2, 3, 5]
+>>> my_list2.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list2)
+[1, 4, 2, 3, 5]
 >>> my_list3 = MyList()
 >>> my_list3.print_sorted()
 []
