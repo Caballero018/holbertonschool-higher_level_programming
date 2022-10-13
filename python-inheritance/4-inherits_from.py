@@ -5,7 +5,7 @@
 def inherits_from(obj, a_class):
     "doc"
     try:
-        if not obj and type(obj) == object:
+        if not obj and type(obj) is object:
             return True
         if not obj:
             return False
