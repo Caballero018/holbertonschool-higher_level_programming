@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-"Doc"
+"Module that have a function that returns the list of available \
+attributes and methods of an object"
 
 
 def lookup(obj):
-    "Doc"
+    "Function that returns the list of available \
+    attributes and methods of an object"
     obj = dir(obj)
     return obj
