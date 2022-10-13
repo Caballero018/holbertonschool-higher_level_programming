@@ -7,7 +7,7 @@ def inherits_from(obj, a_class):
     try:
         if not obj and ((issubclass(obj, a_class) or isinstance(obj, a_class)) or (not issubclass(obj, a_class) or not isinstance(obj, a_class))):
             return False
-        if obj and type(obj) is a_class and not issubclass(obj, a_class):
+        if obj and type(obj) is a_class and issubclass(obj, a_class):
             return False
         else:
             return True
