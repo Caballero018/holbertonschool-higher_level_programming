@@ -4,9 +4,9 @@
 
 def inherits_from(obj, a_class):
     "doc"
-    if not obj and issubclass(obj, a_class):
-        return False
     try:
+        if not obj and issubclass(obj, a_class):
+            return False
         if obj and type(obj) is not a_class and issubclass(obj, a_class):
             return True
         else:
