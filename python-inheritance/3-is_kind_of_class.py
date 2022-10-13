@@ -5,7 +5,10 @@ from, the specified class ; otherwise False."
 
 def is_kind_of_class(obj, a_class):
     "function that returns True if the object is an instance of"
-    if not (isinstance(obj, a_class) or issubclass(obj, a_class)):
-        return False
+    if isinstance(obj, a_class) or issubclass(obj, a_class):
+        try:    
+            return True
+        except TypeError:
+            return True
     else:
-        return True
+        return False
