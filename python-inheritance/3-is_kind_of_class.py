@@ -11,4 +11,4 @@ def is_kind_of_class(obj, a_class):
         else:
             return False
     except TypeError:
-            return True
+            return False
