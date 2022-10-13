@@ -7,9 +7,8 @@ def inherits_from(obj, a_class):
     try:
         if issubclass(obj, a_class):
             return True
-        elif isinstance(obj, a_class):
+        if isinstance(obj, a_class):
             return False
-        else:
-            return False
+        return False
     except TypeError:
             return True
