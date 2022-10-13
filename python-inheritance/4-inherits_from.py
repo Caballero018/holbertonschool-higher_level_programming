@@ -16,4 +16,4 @@ def inherits_from(obj, a_class):
         else:
             return False
     except TypeError:
-            return False
+            return True
