@@ -14,7 +14,7 @@ ls = []
 for i in range(1, len(sys.argv)):
     ls.append(sys.argv[i])
 if os.path.isfile(filename) and not os.stat(filename).st_size == 0:
-    ls += load_from_json_file(filename)
-    save_to_json_file(ls, filename)
+    lis = load_from_json_file(filename) + ls
+    save_to_json_file(lis, filename)
 else:
     save_to_json_file(ls, filename)
