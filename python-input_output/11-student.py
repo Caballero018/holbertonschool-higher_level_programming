@@ -22,7 +22,7 @@ class Student:
                 else:
                     continue
             return ds
-    
+
     def reload_from_json(self, json):
         key = json.keys()
         self = self.__dict__
