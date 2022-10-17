@@ -22,7 +22,10 @@ class Student:
                 else:
                     continue
             return ds
-
+    
     def reload_from_json(self, json):
-        with open(json, mode="rw", encoding="utf-8") as f:
-            f.write(self.__dict__)
+        key = json.keys()
+        ls = []
+        for i in key:
+            print(json[i], end=" ")
+        print()
