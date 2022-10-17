@@ -17,7 +17,8 @@ class Student:
             ds = {}
             self = self.__dict__
             for ls in attrs:
-                if not ls in self:
+                if ls in self:
+                    ds[ls] = self[ls]
+                else:
                     continue                    
-                ds[ls] = self[ls]
             return ds
