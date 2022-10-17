@@ -20,5 +20,5 @@ class Student:
                 if ls in self:
                     ds[ls] = self[ls]
                 else:
-                    continue               
+                    continue
             return ds
