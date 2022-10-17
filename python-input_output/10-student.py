@@ -10,14 +10,14 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        if not attrs:
-            attrs = self.__dict__
-            return attrs
-        else:
+        if attrs:
             ds = {}
             self = self.__dict__
             for ls in attrs:
                 if not ls in self:
-                    continue
+                    continue                    
                 ds[ls] = self[ls]
             return ds
+        else:
+            attrs = self.__dict__
+            return attrs
