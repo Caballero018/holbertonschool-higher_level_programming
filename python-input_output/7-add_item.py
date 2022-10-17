@@ -7,11 +7,13 @@ import sys
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 
-try:
-    arg_list = load_from_json_file("add_item.json")
-except Exception:
-    arg_list = []
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-for element in range(1, len(sys.argv)):
-    arg_list.append(sys.argv[element])
-save_to_json_file(arg_list, "add_item.json")
+ls = []
+filename = "add_item.json"
+for i in range(1, len(sys.argv)):
+    ls.append(sys.argv[i])
+for re in load_from_json_file(filename):
+    ls.append(re)
+save_to_json_file(ls, filename)
