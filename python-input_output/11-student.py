@@ -2,9 +2,6 @@
 "Module that have a class Student that defines a student by"
 
 
-from asyncore import write
-
-
 class Student:
     "Class Student that defines a student by"
     def __init__(self, first_name, last_name, age):
