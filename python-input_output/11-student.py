@@ -25,7 +25,6 @@ class Student:
     
     def reload_from_json(self, json):
         key = json.keys()
-        ls = []
-        for i in key:
-            print(json[i], end=" ")
-        print()
+        self = self.__dict__
+        for k in key:
+            self[k] = json[k]
