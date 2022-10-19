@@ -22,3 +22,4 @@ def pascal_triangle(n):
                     if j != 0 and i != j else 1 for j in range(0, i+1)]
             )
     return form
+    

@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Module that have a class Rectangle that inherits from Base"""
-from turtle import width
 from models.base import Base
 
 

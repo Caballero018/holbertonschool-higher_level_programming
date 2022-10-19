@@ -1,33 +1,26 @@
 #!/usr/bin/python3
-"""
-Add size properties in class Square.
-"""
+"Class Square that defines a square by: (based on 2-square.py)"
 
 
 class Square:
-    """
-    Class that defines a square.
-    Attributes:
-    size(int): size of the square - private attribute.
-    """
+    "Function with atrivute private"
     def __init__(self, size=0):
-        self.__size = size
-
-    def area(self):
-        """Public instance method that returns the current square area"""
-        return self.__size ** 2
-
-    @property
-    def size(self):
-        """Property that retrieves size"""
-        return self.__size
-
-    @size.setter
-    def size(self, value):
-        """Property setter that sets the value of size"""
-        if type(value) != int:
-            raise TypeError('size must be an integer')
-        elif value < 0:
-            raise ValueError('size must be >= 0')
+        if isinstance(size, int):
+            if size < 0:
+                raise ValueError("size must be >= 0")
+            self.__size = size
         else:
+            raise TypeError("size must be an integer")
+
+    "Function with atrivute public"
+    def area(self):
+        return self.__size * self.__size
+    
+    def size(self, value):
+        if isinstance(value, int):
+            if value < 0:
+                raise ValueError("size must be >= 0")
             self.__size = value
+        else:
+            raise TypeError("size must be an integer")
+        return self.__size
