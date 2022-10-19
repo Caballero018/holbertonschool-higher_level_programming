@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"Module that have a class Rectangle that inherits from Base"
+"""Module that have a class Rectangle that inherits from Base"""
 from turtle import width
 from models.base import Base
 
 
 class Rectangle(Base):
-    "Class Rectangle that inherits from Base"
+    """Class Rectangle that inherits from Base"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        "Class constructor"
+        """Class constructor"""
         super().__init__(id)
         self.width = width
         self.height = height
@@ -17,12 +17,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        "width"
+        """width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        "width"
+        """width"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -32,12 +32,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        "height"
+        """height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        "height"
+        """height"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -46,12 +46,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        "x"
+        """x"""
         return self.__x
 
     @x.setter
     def x(self, value):
-        "x"
+        """x"""
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
@@ -60,12 +60,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        "y"
+        """y"""
         return self.__y
 
     @y.setter
     def y(self, value):
-        "y"
+        """y"""
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
@@ -73,5 +73,5 @@ class Rectangle(Base):
         self.__y = value
     
     def area(self):
-        "Area"
+        """Area"""
         return self.__height * self.__width
