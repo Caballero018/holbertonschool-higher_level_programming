@@ -120,5 +120,3 @@ class Rectangle(Base):
                     self.__x = v
                 if k == "y":
                     self.__y = v
-
-
