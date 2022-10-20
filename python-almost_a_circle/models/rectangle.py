@@ -95,15 +95,30 @@ class Rectangle(Base):
                 self.__y, self.__width, self.__height
             )
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         args
         """
-        self = self.__dict__
-        try:
-            i = 0
-            for k in self.keys():
-                self[k] = args[i]
-                i += 1
-        except IndexError:
-            i = i - 1
+        if args:
+            self = self.__dict__
+            try:
+                i = 0
+                for k in self.keys():
+                    self[k] = args[i]
+                    i += 1
+            except IndexError:
+                i = i - 1
+        if kwargs:
+            for k, v in kwargs.items():
+                if k == "id":
+                    self.id = v
+                if k == "width":
+                    self.__width = v
+                if k == "height":
+                    self.__height = v
+                if k == "x":
+                    self.__x = v
+                if k == "y":
+                    self.__y = v
+
+
