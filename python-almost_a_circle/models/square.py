@@ -10,13 +10,12 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
         self.size = size
 
-
     def __str__(self):
         """Square"""
         return "[Square] ({}) {}/{} - {}".format(
                 self.id, self.x, self.y, self.width
                 )
- 
+
     def size(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
