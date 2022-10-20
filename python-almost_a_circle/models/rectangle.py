@@ -97,9 +97,9 @@ class Rectangle(Base):
 
     def update(self, *args):
         "args"
-        i = 0
         self = self.__dict__
         try:
+            i = 0
             for k in self.keys():
                 self[k] = args[i]
                 i += 1
