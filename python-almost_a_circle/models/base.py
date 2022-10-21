@@ -22,7 +22,7 @@ class Base:
         Static method that returns the JSON string representation
         of list_dictionaries
         """
-        if list_dictionaries is None:
+        if list_dictionaries is None or not list_dictionaries:
             return "[]"
         list_dictionaries = str(list_dictionaries)
         return list_dictionaries[1:-1]
