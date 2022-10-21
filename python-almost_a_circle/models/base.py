@@ -22,9 +22,5 @@ class Base:
         Static method that returns the JSON string representation
         of list_dictionaries
         """
-        ls = str(list_dictionaries)
-        if not list_dictionaries or type(list_dictionaries) is None:
-            ls = []
-            return ls
-        
-        return ls[1:-1]
+        ls = str(list_dictionaries)        
+        return ls
