@@ -22,4 +22,5 @@ class Base:
         Static method that returns the JSON string representation
         of list_dictionaries
         """
-        return json.dumps(list_dictionaries)
+        ls = str(list_dictionaries)
+        return ls[1:-1]
