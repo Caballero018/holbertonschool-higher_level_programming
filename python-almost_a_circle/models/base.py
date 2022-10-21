@@ -23,4 +23,8 @@ class Base:
         of list_dictionaries
         """
         ls = str(list_dictionaries)
+        if not list_dictionaries or type(list_dictionaries) is None:
+            ls = []
+            return ls
+        
         return ls[1:-1]
