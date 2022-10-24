@@ -8,10 +8,10 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Class constructor"""
         super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     @property
     def width(self):
@@ -98,27 +98,39 @@ class Rectangle(Base):
         <x>/<y> - <width>/<height>
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
-                self.id, self.__x,
-                self.__y, self.__width, self.__height
-            )
+                self.id, self.x,
+                self.y, self.width, self.height
+                )
 
     def update(self, *args, **kwargs):
         """
         Public method that assigns an argument to each attribute
         """
+        """
         if args:
-            self = self.__dict__
-            try:
+          try:
                 i = 0
                 for k in self.keys():
                     self[k] = args[i]
                     i += 1
             except IndexError:
                 i = i - 1
-        if kwargs:
-            if not args:
-                for key, value in kwargs.items():
-                    setattr(self, key, value)
+        """
+        if args is not None and len(args) > 0:
+            for i in range(len(args)):
+                if i == 0:
+                    self.id = args[i]
+                if i == 1:
+                    self.__width = args[i]
+                if i == 2:
+                    self.__height = args[i]
+                if i == 3:
+                    self.__x = args[i]
+                if i == 4:
+                    self.__y = args[i]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """Returns the dictionary representation of a Rectangle"""
