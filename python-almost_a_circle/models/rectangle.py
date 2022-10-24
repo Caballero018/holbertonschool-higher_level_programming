@@ -8,8 +8,8 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Class constructor"""
         super().__init__(id)
-        self.__width = self.width
-        self.__height = self.height
+        self.width = width
+        self.height = height
         self.x = x
         self.y = y
 
@@ -51,9 +51,10 @@ class Rectangle(Base):
         """x attribute"""
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("x must be >= 0")
-        self.__x = value
+        else:
+            self.__x = value
 
     @property
     def y(self):
@@ -74,21 +75,21 @@ class Rectangle(Base):
         Public method def that returns the area value of the
         Rectangle instance.
         """
-        return self.__height * self.__width
+        return self.height * self.width
 
     def display(self):
         """
         Public method def to print in stdout the Rectangle
         instance with the character # by taking care of x and y
         """
-        if self.__height == 0 or self.width == 0:
+        if self.height == 0 or self.width == 0:
             return ""
-        for y in range(self.__y):
+        for y in range(self.y):
             print()
-        for i in range(self.__height):
-            for x in range(self.__x):
+        for i in range(self.height):
+            for x in range(self.x):
                 print(" ", end="")
-            for j in range(self.__width):
+            for j in range(self.width):
                 print("#", end="")
             print()
 
@@ -121,32 +122,33 @@ class Rectangle(Base):
                 if i == 0:
                     self.id = args[i]
                 if i == 1:
-                    self.__width = args[i]
+                    self.width = args[i]
                 if i == 2:
-                    self.__height = args[i]
+                    self.height = args[i]
                 if i == 3:
-                    self.__x = args[i]
+                    self.x = args[i]
                 if i == 4:
-                    self.__y = args[i]
+                    self.y = args[i]
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
     def to_dictionary(self):
         """Returns the dictionary representation of a Rectangle"""
-        self = self.__dict__
-        key = self.copy().keys()
+        dictionary = self.__dict__.copy()
+        key = dictionary.copy().keys()
         for k in key:
             if k == '_Rectangle__width':
-                self["width"] = self[k]
-                del self[k]
+                dictionary["width"] = dictionary[k]
+                del dictionary[k]
             if k == '_Rectangle__height':
-                self["height"] = self[k]
-                del self[k]
+                dictionary["height"] = dictionary[k]
+                del dictionary[k]
             if k == '_Rectangle__x':
-                self["x"] = self[k]
-                del self[k]
+                dictionary["x"] = dictionary[k]
+                del dictionary[k]
             if k == '_Rectangle__y':
-                self["y"] = self[k]
-                del self[k]
-        return self
+                dictionary["y"] = dictionary[k]
+                del dictionary[k]
+
+        return dictionary
