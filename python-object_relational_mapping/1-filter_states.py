@@ -24,7 +24,9 @@ if __name__ == "__main__":
 
     "Print the rows of the table"
     for row in rows:
-        print(row)
+        r = str(row[1])
+        if r[0] == 'N':
+            print(row)
 
     "Close all cursors"
     cur.close()
