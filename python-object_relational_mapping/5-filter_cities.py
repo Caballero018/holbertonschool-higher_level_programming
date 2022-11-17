@@ -22,8 +22,8 @@ if __name__ == "__main__":
     cur.execute(
         """
         SELECT cities.name FROM cities
-        INNER JOIN states ON states.id = cities.state_id WHERE states.name = %s ORDER BY
-        cities.id ASC
+        INNER JOIN states ON states.id = cities.state_id
+        WHERE states.name = %s ORDER BY cities.id ASC
         """, (argv[4],)
     )
     rows = cur.fetchall()
