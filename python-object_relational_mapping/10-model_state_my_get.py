@@ -10,7 +10,7 @@ def state():
 
     qry = session.query(State).filter(State.name == sys.argv[4]).all()
     for qr in qry:
-        print("{}".format(qr.name))
+        print("{}".format(qr.id))
         return
     print("Not found")
     session.close()
