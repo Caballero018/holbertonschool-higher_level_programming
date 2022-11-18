@@ -5,14 +5,13 @@ from model_state import Base, State
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
+
 def state():
     session = Session()
-
-    qry = session.query(State).filter(State.name == sys.argv[4]).all()
-    for qr in qry:
-        print("{}".format(qr.name))
-        return
-    print("Not found")
+    Louisiana = State(name="Louisiana")
+    session.add(Louisiana)
+    print(Louisiana.id)
+    session.commit()
     session.close()
 
 
