@@ -10,7 +10,8 @@ def state():
     session = Session()
     Louisiana = State(name="Louisiana")
     session.add(Louisiana)
-    print(Louisiana.id)
+    qry = session.query(State).filter(State.name == "Louisiana").first()
+    print(qry.id)
     session.commit()
     session.close()
 
