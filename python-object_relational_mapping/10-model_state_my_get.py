@@ -4,7 +4,16 @@ import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import text
+
+def state():
+    session = Session()
+
+    qry = session.query(State).filter(State.name == sys.argv[4]).all()
+    for qr in qry:
+        print("{}".format(qr.name))
+        return
+    print("Not found")
+    session.close()
 
 
 if __name__ == "__main__":
@@ -15,10 +24,4 @@ if __name__ == "__main__":
                                         )
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
-    session = Session()
-
-    query = session.query(State).filter(State.name == sys.argv[4])
-
-    for qr in query:
-        print("{}".format(qr.id))
-    session.close()
+    state()
