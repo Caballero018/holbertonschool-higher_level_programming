@@ -10,7 +10,7 @@ def state():
 
     qry = session.query(State).filter(State.id == 2).first()
     qry.name = "New Mexico"
-    session.commit
+    session.commit()
     session.close()
 
 
