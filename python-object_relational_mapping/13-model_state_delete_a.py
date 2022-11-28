@@ -9,8 +9,7 @@ from sqlalchemy.orm import sessionmaker
 def state():
     session = Session()
 
-    qry = session.query(State).filter(State.name.like('%a%'))
-    session.delete(qry)
+    qry = session.query(State).filter(State.name.like('%a%')).delete(synchronize_session=False)
     session.commit()
     session.close()
 
