@@ -2,27 +2,23 @@
 const args = process.argv;
 const len = Object.keys(args).length;
 
-function second_max (array) {
-  const ar = [].concat(array);
-  const ar2 = [].concat(array);
-  let i;
+function findSecondLargestElem(arr){
+    let first = -1 , second = -1;
 
-  for (i = 4; i <= Object.keys(array).length; i++) {
-    if (Number(ar[2]) < Number(array[i])) {
-      ar[2] = array[i];
+    for(let i = 0; i <= Object.keys(arr).length -1; i++){
+        if(arr[i] > first){
+            second = first;
+            first = arr[i];
+        }
+        else if(arr[i] > second && arr[i] != first){
+            second = arr[i];
+        }
     }
-    i++;
-  }
-  for (i = 4; i <= Object.keys(array).length; ++i) {
-    if (Number(ar2[2]) < Number(array[i]) && Number(ar2[2]) < Number(ar[2])) {
-      ar2[2] = array[i];
-    }
-  }
-  return ar2[2];
+    console.log(second);
 }
 
 if (len > 3) {
-  console.log(second_max(args));
+  findSecondLargestElem(args);
 } else {
   console.log(1);
 }
