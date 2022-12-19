@@ -2,7 +2,7 @@
 const myVar = process.argv;
 let message;
 
-if (Object.keys(myVar).length == 3) {
+if (Object.keys(myVar).length === 3) {
   message = 'Argument found';
   console.log(message);
 } else if (Object.keys(myVar).length > 3) {
