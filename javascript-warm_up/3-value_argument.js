@@ -1,20 +1,16 @@
 #!/usr/bin/node
-const myVar = process.argv;
+const args = process.argv;
 let message;
-let lenmyvar = 0;
+let len = 0;
 let i;
 
 // eslint-disable-next-line no-unused-vars
-for (const arg in myVar) {
-  lenmyvar += 1;
+for (const arg in args) {
+  len += 1;
 }
 
-if (lenmyvar > 2) {
-  i = 2;
-  while (i < lenmyvar) {
-    console.log(myVar[i]);
-    i++;
-  }
+if (len > 2) {
+  console.log(args[2])
 } else {
   message = 'No argument';
   console.log(message);
