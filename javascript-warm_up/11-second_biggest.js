@@ -20,5 +20,5 @@ function findSecondLargestElem(arr){
 if (len > 3) {
   findSecondLargestElem(args);
 } else {
-  console.log(1);
+  console.log(0);
 }
