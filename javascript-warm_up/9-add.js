@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const args = process.argv;
-function add(a, b) {
+function add (a, b) {
   const len = Object.keys(args).length;
   if (!(isNaN(parseInt(a)) || len === 3)) {
     return parseInt(a) + parseInt(b);
@@ -8,4 +8,4 @@ function add(a, b) {
     return NaN;
   }
 }
-console.log(add(args[2], args[3]))
+console.log(add(args[2], args[3]));
