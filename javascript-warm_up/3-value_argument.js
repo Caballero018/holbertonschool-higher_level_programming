@@ -2,15 +2,12 @@
 const myVar = process.argv;
 let message;
 
-function len(args){
-    let i = 0
-  for (const arg in args){
-    i += 1
-  }
-  return i;
+let i = 0
+for (const arg in Object.keys(myVar)){
+  i += 1
 }
 
-let len_myvar = len(Object.keys(myVar));
+let len_myvar = i;
 if (len_myvar >= 2) {
   let i = 2
   while (i < len_myvar){
