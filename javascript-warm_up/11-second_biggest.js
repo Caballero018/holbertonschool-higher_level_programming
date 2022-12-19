@@ -6,11 +6,11 @@ function findSecondLargestElem(arr){
     let first = -1 , second = -1;
 
     for(let i = 0; i <= Object.keys(arr).length -1; i++){
-        if(arr[i] > first){
+        if(Number(arr[i]) > first){
             second = first;
             first = arr[i];
         }
-        else if(arr[i] > second && arr[i] != first){
+        else if(Number(arr[i]) > second && Number(arr[i]) != first){
             second = arr[i];
         }
     }
