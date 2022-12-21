@@ -1,0 +1,33 @@
+#!/usr/bin/node
+module.exports = class Rectangle {
+  constructor (w, h) {
+    if (w <= 0 || h <= 0 || !w || !h) {
+      return this;
+    } else {
+      this.width = w;
+      this.height = h;
+    }
+  }
+
+  print () {
+    let x;
+    for (let i = 1; i <= this.height; i++) {
+      x = '';
+      for (let j = 1; j <= this.width; j++) {
+        x += 'X';
+      }
+      console.log(x);
+    }
+  }
+
+  rotate () {
+    const change = this.width;
+    this.width = this.height;
+    this.height = change;
+  }
+
+  double () {
+    this.width = this.width * 2;
+    this.height = this.height * 2;
+  }
+};
