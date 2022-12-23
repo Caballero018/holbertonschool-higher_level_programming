@@ -6,8 +6,8 @@ const path = './' + process.argv[3];
 request.get({ url: url }, function (error, response, body) {
   if (!error && response.statusCode === 200) {
     if (Object.keys(body).length > 0 && (!fs.existsSync(path.toString()))) {
-      fs.writeFile(process.argv[3], body, 'utf-8', function (error) {
-        if (error) console.log(error);
+      fs.writeFile(process.argv[3], body, 'utf-8', (err) => {
+        if (err) throw err;
       });
     }
   }
