@@ -13,7 +13,6 @@ request.get({ url: url, json: true }, function (error, response, body) {
         }
       }
       count = 1;
-      console.log(i);
     }
     console.log(obj);
   }
