@@ -8,7 +8,7 @@ request.get({ url: url, json: true }, function (error, response, body) {
     // eslint-disable-next-line no-unused-vars
     for (let i = 1; i <= Object.keys(body).length; i++) {
       for (const dic of body) {
-        if (i === dic.userId) {
+        if (i === dic.userId && dic.userId) {
           if (dic.completed === true) obj[i.toString()] = count++;
         }
       }
