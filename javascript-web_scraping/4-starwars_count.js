@@ -8,7 +8,7 @@ request.get({ url: url, json: true }, function (error, response, body) {
     // eslint-disable-next-line no-unused-vars
     for (const dls of body.results) {
       for (const l of body.results[i].characters) {
-        if (l === 'https://swapi-api.hbtn.io/api/people/18/') count++;
+        if (l.includes(18)) count++;
       }
       i++;
     }
