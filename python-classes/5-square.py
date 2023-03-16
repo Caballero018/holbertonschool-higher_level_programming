@@ -34,4 +34,4 @@ class Square:
             for _ in range(self.__size):
                 sign_numb += '#'
             sign_numb += '\n'
-        print(sign_numb)
+        print(sign_numb, end='')
